@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Exo 2', sans-serif;
+}
+
+@font-face {
+    font-family: 'Sans';
+    src: url("../assets/RobotoSlab-Medium.ttf");
+}
+
+html,
+body {
+    color: white;
+    height: 100%;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap > .container {
+    padding: 0 15px 20px;
+}
+
+.footer {
+    background: firebrick;
+    border: none;
+    background-size: cover;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+    padding: 15px;
+    border: none;
+}
+
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
+
+.btn-dark {
+    background-color: #000;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .0) 10%,
+    firebrick 30%,
+    rgba(255, 255, 255, .0));
+    background-repeat: no-repeat;
+    background-size: 200% 100%, auto;
+    background-position: 100% 0, 0 0;
+    box-shadow: rgba(0, 0, 0, .3) 0 2px 5px, black 0 3px 10px;
+    text-shadow: 0 0 2px black;
+    border-radius: 3px;
+    transition: .3s;
+    letter-spacing: 2px;
+    font-size: 20px;
+    width: 100%;
+}
+
+.btn-dark:hover, .btn-dark:active {
+    color: #cccccc;
+    transition: .3s;
+}
+
+.review {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.review > h6, .review > h5, .review > h4 {
+    padding: 5px;
+}
+
+tr, td, th {
+    color: white;
+    background: rgba(0, 0, 0, 0.87);
+}
+
+#signupform-username {
+    width: 30%;
+}
+
+#signupform-password {
+    width: 30%;
+}
+
+.col-lg-12 {
+    margin: 10px;
+}
+
+.color {
+    background: #c4e3f3;
+}
+
+.hr {
+    border: 1px solid black;
+}
+
+.index {
+    margin-top: 7vh;
+    width: 100%;
+    background: grey;
+    color: black;
+    padding: 10px;
+}
+
+.in {
+    width: 50%;
+}
+
+.breadcrumb {
+    width: 100%;
+    background: black;
+}
+
+.breadcrumb a {
+    color: white !important;
+}
+
+.breadcrumb li {
+    color: white !important;
+}
+
+.breadcrumb li:hover {
+    cursor: default;
+}
+
+.navbar-fixed-top {
+    background: rgba(0, 0, 0, 0.71);
+    border: none;
+    box-shadow: 0 0 2px 3px firebrick;
+}
+
+#w1 li a {
+    color: white;
+}
+
+#w1 li a:hover {
+    color: white;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 999;
+}
+
+li.active {
+    background: firebrick;
+
+}
+
+a.navbar-brand {
+    color: white;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: black;
+    transition: .5s;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+    transition: .5s;
+}
+
+.navbar-inverse .navbar-brand:hover {
+    color: white;
+    background: black;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: black;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    height: 340px;
+    float: left;
+    width: 30%;
+    margin: 15px 1.25% 15px 1.25%;
+    cursor: pointer;
+}
+
+.btn-dark {
+    opacity: 0;
+    transition: .8s;
+}
+
+.card:hover .btn-dark {
+    opacity: 1;
+    transition: .8s;
+}
+
+.buy {
+    margin: 5px;
+    padding: 5px;
+    color: firebrick;
+    background: black;
+    border: 1px solid black;
+    border-radius: 3px;
+    font-size: 30px;
+}
+
+.buy:hover {
+    background: rgba(0, 0, 0, 0.75);
+    transition: .3s;
+}
+
+td, th {
+    background: white;
+    color: black;
+}
+
+
+.fon {
+    width: 100%;
+    height: 100vh;
+    background: url("../../web/assets/image/background.jpg");
+    background-size: cover;
+    border-bottom: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.wrap {
+    background: rgba(0, 0, 0, 0.9);
+    min-height: 100vh;
+}
+
+.buy_ticket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    color: firebrick;
+    text-shadow: 1px 1px 3px #353535;
+    font-size: 40px;
+    border-radius: 3px;
+    font-family: 'Cinzel', serif;
+    margin-top: -150px;
+}
+
+.links {
+    padding: 5px;
+}
+
+.site-index {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.product-index {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-inverse .navbar-nav >
+.active > a, .navbar-inverse
+.navbar-nav > .active >
+a:hover, .navbar-inverse
+.navbar-nav > .active > a:focus {
+    background: none;
+}
+
+.body-content > h1 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+
+.top_image {
+    background: url("../../web/assets/image/background.jpg") 10% 45%;
+    background-size: cover;
+    width: 100%;
+    height: 30vh;
+}
+
+.GalleryCard {
+    float: left;
+    width: 50%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.GalleryCard:hover {
+    filter: invert(10%);
+    box-shadow: 0 0 2px white;
+}
+
+.GalleryCard:hover .btn-more {
+    display: block;
+    animation: show linear .4s;
+}
+
+.GalleryCard .btn-more {
+    display: none;
+    background-image: linear-gradient(45deg, rgba(67, 90, 255, 1) 10%,
+    rgba(255, 82, 211, 1) 30%,
+    rgba(255, 14, 26, 1));
+    font-size: 30px;
+    padding: 4px;
+    text-decoration: none;
+    color: white;
+    transition: .4s;
+    border-radius: 3px;
+}
+
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*----------------------A-MEDIA(only main page)-----------------------*/
+@media (max-width: 767px) {
+    .nav li > form > button.logout {
+        display: block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 15px;
+    }
+
+}
+
+@media screen and (max-width: 414px) {
+    .card {
+        width: 90% !important;
+        margin-left: 5% !important;
+        margin-right: auto;
+    }
+
+    .buy_ticket {
+        text-align: center;
+        font-size: 35px;
+        background: rgba(0, 0, 0, 0.80);
+        margin-top: 1vh;
+
+
+    }
+}
+
+@media (width: 320px) {
+    .card {
+        width: 90% !important;
+        margin-left: 5% !important;
+        margin-right: auto;
+    }
+
+    .buy_ticket {
+        text-align: center;
+        font-size: 35px;
+        background: rgba(0, 0, 0, 0.80);
+        margin-top: 1vh;
+
+    }
+}
+
